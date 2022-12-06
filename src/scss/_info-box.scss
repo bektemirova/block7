@@ -1,0 +1,97 @@
+@import "./global.scss";
+
+.info-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  gap: 20px;
+  font-family: var(--font-family-main);
+
+  &__about-image {
+    max-width: 531px;
+    max-height: 307px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    &__text-content {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content auto;
+  }
+
+  &__btn {
+    display: flex;
+    font-family: "TTLakes-Medium", sans-serif;
+    align-items: center;
+    justify-content: flex-start;
+    line-height: 1;
+    padding: 15px;
+    cursor: pointer;
+  }
+
+  &__btn::before {
+    content: url("../img/expand.png");
+  }
+
+  //js click to read more
+  .open {
+    height: auto;
+  }
+
+  .rotate::before {
+    transform: rotate(180deg);
+  }
+
+  //added class for btn, text
+
+  .main-page__article-text:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    display: block;
+    border-right: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-end-end-radius: 2px;
+    border-end-start-radius: 2px;
+    border-start-end-radius: 2px;
+    width: 7px;
+    height: 7px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .main-page__article-text:after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 20%;
+    display: block;
+    border-right: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-end-end-radius: 2px;
+    border-end-start-radius: 2px;
+    border-start-end-radius: 2px;
+    width: 7px;
+    height: 7px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .main-page__article-text {
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: "TTLakes-Medium", sans-serif;
+  }
+}

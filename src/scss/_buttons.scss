@@ -1,0 +1,45 @@
+.button {
+	width: 40px;
+	height: 40px;
+}
+
+button[title^="menu"] {
+	background: url("../img/burger.svg") no-repeat;
+	background-size: contain;
+}
+
+button[title^="close-menu"] {
+	background: url("../img/close-menu.svg") no-repeat;
+	background-size: contain;
+	margin-right: 20px;
+}
+
+button[title^="search-menu"] {
+	background: url("../img/search.svg") no-repeat;
+	background-size: contain;
+}
+
+button[title^="call"] {
+	background: url("../img/call.svg") no-repeat;
+	background-size: contain;
+}
+
+button[title^="chat"] {
+	background: url("../img/chat.svg") no-repeat;
+	background-size: contain;
+}
+
+button[title^="profile"] {
+	background: url("../img/profile.svg") no-repeat;
+	background-size: contain;
+}
+
+button[title^="repair"] {
+	background: url("../img/repair.svg") no-repeat;
+	background-size: contain;
+}
+
+button[title^="checkstatus"] {
+	background: url("../img/checkstatus.svg") no-repeat;
+	background-size: contain;
+}

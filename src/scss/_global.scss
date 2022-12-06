@@ -1,0 +1,38 @@
+:root {
+	--font-family-main: "TTLakes-Regular", sans-serif;
+	--font-size-s: 14px;
+	--font-line-s: 20px;
+	--font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+	--icon-color: #ff3e79;
+	--main-background: #f8f8f8;
+	--primary: #41f6d7;
+	--text-color: #1b1c21;
+	--menu-text-color: #7e7e82;
+	--white: #ffffff;
+	--line-color: #eaeaea;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+button,
+a,
+ul,
+input {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	position: relative;
+	list-style: none;
+	text-decoration: none;
+	font: inherit;
+	cursor: pointer;
+	color: inherit;
+}

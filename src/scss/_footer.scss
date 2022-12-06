@@ -1,0 +1,15 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-family: "TTLakes-Medium", sans-serif;
+  color: #7e7e82;
+  padding: 20px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+}

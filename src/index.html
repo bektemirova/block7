@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1.6</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <header class="header">
+          <div class="header__icons-box">
+            <button type="button" class="button" title="menu"></button>
+            <a href="#">
+              <img src="./img/logo.svg" class="logo-img" alt="logo cps" />
+            </a>
+          </div>
+
+          <div class="header__icons-box_tablet-icons">
+            <button type="button" class="button" title="call"></button>
+            <button type="button" class="button" title="chat"></button>
+            <button
+              type="button"
+              class="button button__line"
+              title="profile"
+            ></button>
+          </div>
+
+          <div class="header__icons-box">
+            <button type="button" class="button" title="repair"></button>
+            <button type="button" class="button" title="checkstatus"></button>
+          </div>
+        </header>
+
+        <aside class="aside">
+          <div class="aside__top">
+            <div class="aside__logo">
+              <a href="#">
+                <img src="img/logo.svg" class="logo-img" alt="logo cps" />
+              </a>
+            </div>
+
+            <button type="button" class="button" title="search-menu"></button>
+          </div>
+          <ul class="aside__ul">
+            <li><a href="#">Ремонт техники</a></li>
+            <li><a href="#">Услуги и сервисы</a></li>
+            <li><a href="#">Корпоративным клиентам</a></li>
+            <li><a href="#">Продавцам техники</a></li>
+            <li><a href="#">Партнерам</a></li>
+            <li><a href="#">Производителям</a></li>
+            <li><a href="#">Наши сервисные центры</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+
+          <div class="aside__contact">
+            <ul class="aside__btn-icons">
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+
+            <div class="aside__contact-text">
+              <a href="mailto:mail@cps.com" class="aside__contact-mail"
+                >mail@cps.com</a
+              >
+              <a href="tel:+7800890890" class="aside__contact-phone"
+                >8 800 890 8900</a
+              >
+            </div>
+            <div class="aside__language">
+              <button type="button">RU</button>
+              <button type="button">EN</button>
+              <button type="button">CH</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div class="main">
+        <main class="main-page">
+          <div class="main-page__text-box">
+            <h1 class="main-page__text">Услуги и сервисы</h1>
+            <div class="main-page__text-icons">
+              <span>Оставить заявку</span>
+              <button type="button" class="button" title="repair"></button>
+              <span>Статус ремонта</span>
+              <button type="button" class="button" title="checkstatus"></button>
+            </div>
+          </div>
+
+          <nav class="navbar">
+            <ul class="main-page__ul">
+              <li class="main-page__li">
+                <a href="#" class="main-page__link-item"
+                  >Ремонтируемые устройства</a
+                >
+              </li>
+              <li class="main-page__li">
+                <a href="#" class="main-page__link-item"
+                  >Дополнительные услуги</a
+                >
+              </li>
+              <li class="main-page__li">
+                <a href="#" class="main-page__link-item">Цены и услуги</a>
+              </li>
+              <li class="main-page__li">
+                <a href="#" class="main-page__link-item"
+                  >Адреса сервисных центров</a
+                >
+              </li>
+              <li class="main-page__li">
+                <a href="#" class="main-page__link-item">Специальные цены</a>
+              </li>
+              <li class="main-page__li">
+                <a href="#" class="main-page__link-item">Отзывы</a>
+              </li>
+            </ul>
+          </nav>
+
+          <article class="info-box">
+            <div class="info-box__about-item">
+              <p>
+                Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.
+              </p>
+              <br />
+              <p class="info-box__text-content">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера, что подтверждает большое количество постоянных
+                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                и, в свою очередь, советуют нас родным и близким.
+              </p>
+
+              <button class="info-box__btn">
+                <span class="info-box__btn-text">Показать больше</span>
+              </button>
+            </div>
+
+            <div class="info-box__about-image">
+              <img src="img/cps.png" alt="about cps" />
+            </div>
+          </article>
+
+          <section class="slider-section">
+            <p class="slider-section__text">Ремонт техники различных брендов</p>
+            <div class="slider swiper">
+              <div class="brands swiper-wrapper"></div>
+            </div>
+
+            <button class="show-more__btn">
+              <span class="show-more__text">Показать больше</span>
+            </button>
+
+            <div class="swiper-pagination"></div>
+          </section>
+          <section class="slider-section">
+            <p class="slider-section__text">Ремонт различных видов техники</p>
+            <div class="slider swiper">
+              <div class="tech swiper-wrapper"></div>
+            </div>
+
+            <button class="show-more__btn">
+              <span class="show-more__text">Показать больше</span>
+            </button>
+
+            <div class="swiper-pagination"></div>
+          </section>
+
+          <section class="slider-section">
+            <p class="slider-section__text">Цены на услуги</p>
+
+            <div class="slider-price swiper">
+              <div class="header-row">
+                <p class="header-row__col">Ремонтные услуги</p>
+                <p class="header-row__col">Цена</p>
+                <p class="header-row__col">Срок</p>
+              </div>
+              <div class="price swiper-wrapper"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </section>
+          <div class="offer-box">
+            <p class="copy-right">
+              Все цены указаны с учетом НДС. Стоимость ремонта указана на
+              единичную услугу. Для получения коммерческого предложения на
+              постоянное обслуживание, оставьте заявку.
+            </p>
+            <h3 class="offer-txt">Получить коммерческое предложение</h3>
+          </div>
+        </main>
+        <footer class="footer">
+          <p>
+            © 2019 CPS <br />
+            Разработано командой Apesong
+          </p>
+          <p>Политика конфиденциальности</p>
+          <p>
+            Информация, размещенная на данной странице, не является публичной
+            офертой
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

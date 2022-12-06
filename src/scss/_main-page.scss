@@ -1,0 +1,113 @@
+.main-page {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__text-box:first-child {
+    font-family: "TTLakes-Bold", sans-serif;
+  }
+
+  &__text-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  &__text-box::before {
+    content: "";
+    border-left: 4px solid var(--primary);
+    width: 0;
+    height: 40px;
+    position: absolute;
+    top: 2px;
+    left: -15px;
+  }
+
+  &__text-icons {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.6em;
+    font-family: "TTLakes-Medium", sans-serif;
+    font-size: 1rem;
+  }
+
+  &__ul {
+    max-width: 1120px;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 16px;
+
+    width: max-content;
+  }
+
+  &__li {
+    border: 2px solid transparent;
+    /*border-color: transparent;*/
+    border-radius: 5px;
+    padding: 8px;
+  }
+
+  &__li:focus,
+  &__li:hover {
+    opacity: 1;
+    cursor: pointer;
+    background-color: var(--white);
+    border-color: #b8ffec;
+  }
+
+  &__li > a {
+    color: var(--menu-text-color);
+    outline-color: #b8ffec;
+    outline-offset: 8px;
+  }
+
+  .navbar {
+    font-family: "TTLakes-Medium", sans-serif;
+    font-size: 1rem;
+    overflow-x: auto;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    //scrollbar-width: none; /* Firefox */
+  }
+
+  .navbar::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  .offer-box {
+    width: 50%;
+    padding: 20px;
+    font-family: "TTLakes-Regular", sans-serif;
+
+
+    .offer-txt {
+      margin-top: 10px;
+      font-family: "TTLakes-Medium", sans-serif;
+
+
+    }
+
+    .offer-txt::after {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      transform: rotate(-45deg);
+      border-right: 3px solid #ff3e79;
+      border-bottom: 3px solid #ff3e79;
+      border-radius: 1px;
+      position: relative;
+      margin-left: 5px;
+      transition: 0.5s;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+    }
+
+  }
+
+
+}
