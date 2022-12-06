@@ -1,0 +1,125 @@
+.call-modal {
+  display: none;
+}
+
+.chat-modal {
+  display: none;
+}
+
+.open-modal {
+  display: block;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.9);
+}
+.modal-wrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 440px;
+  padding: 24px;
+  height: 100%;
+  background-color: white;
+  box-shadow: rgba(61, 61, 62, 0.5) 0px 8px 40px;
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    left: -60px;
+    background-color: var(--icon-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+    background-image: url('../img/icon.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  .text {
+    font-family: 'TTLakes-Bold', sans-serif;
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+
+  .text::before {
+    content: '';
+    position: absolute;
+    border-left: 4px solid var(--primary);
+    border-radius: 10px;
+    height: 40px;
+
+    left: 0;
+    transform: translateY(-4px);
+    transition: 0.5s;
+  }
+
+  .form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    font-family: 'TTLakes-Regular', sans-serif;
+
+    input {
+      padding: 10px;
+      width: 100%;
+      border: 1px solid var(--line-color);
+      border-radius: 5px;
+    }
+
+    &__area {
+      border: 1px solid var(--line-color);
+      padding: 10px;
+      font-family: 'TTLakes-Regular', sans-serif;
+      border-radius: 5px;
+    }
+
+    &__btn {
+      background-color: #ff3e79;
+      padding: 8px 12px;
+      justify-self: flex-end;
+      color: white;
+      text-transform: uppercase;
+      font-family: 'TTLakes-Bold', sans-serif;
+      font-size: 12px;
+      border-radius: 15px;
+      width: 136px;
+      align-self: flex-end;
+    }
+
+    &__btn::after {
+      content: url('../img/dropdown.svg');
+      margin-left: 15px;
+    }
+
+    &__agree {
+      span {
+        color: var(--icon-color);
+      }
+    }
+  }
+
+  @media screen and(max-width: 768px) {
+    padding: 10px;
+
+    .text {
+      margin-top: 90px;
+    }
+
+    //.text::before {
+    //  top: -3px;
+    //  left: -10px;
+    //}
+
+    .close-btn {
+      left: 10px;
+      top: 15px;
+    }
+  }
+}

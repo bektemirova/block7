@@ -1,8 +1,12 @@
-import "swiper/swiper-bundle.css";
-import Swiper, {Pagination} from "swiper";
-// import { Pagination } from "swiper/modules/pagination";
 
-Swiper.use([Pagination]);
+
+
+import Swiper, {Navigation, Pagination} from 'swiper';
+//Swiper.use([Navigation, Pagination]);
+
+
+
+
 import acer from "../img/acer.svg";
 import hp from "../img/hp.svg";
 import lenovo from "../img/lenovo.svg";
@@ -11,6 +15,8 @@ import sony from "../img/sony.svg";
 import viewsonic from "../img/viewsonic.svg";
 import samsung from "../img/samsung.svg";
 import bosch from "../img/bosch.svg";
+
+
 
 const brandList = document.querySelector(".brands");
 const breakPoint = window.matchMedia("(min-width:768px)");
@@ -26,6 +32,7 @@ export const breakpointChecker = () => {
 
 export const turnOnSwiper = () => {
   mySwiper = new Swiper(".swiper", {
+    modules: [Navigation, Pagination],
     spaceBetween: 30,
     pagination: {
       el: ".swiper-pagination",
