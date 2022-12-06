@@ -11,7 +11,12 @@
       <div class="sidebar">
         <header class="header">
           <div class="header__icons-box">
-            <button type="button" class="button" title="menu"></button>
+            <button
+              type="button"
+              class="button"
+              title="menu"
+              id="burger-menu"
+            ></button>
             <a href="#">
               <img src="./img/logo.svg" class="logo-img" alt="logo cps" />
             </a>
@@ -35,6 +40,7 @@
 
         <aside class="aside">
           <div class="aside__top">
+            <button class="burger-close"></button>
             <div class="aside__logo">
               <a href="#">
                 <img src="img/logo.svg" class="logo-img" alt="logo cps" />
@@ -150,7 +156,7 @@
             </div>
 
             <button class="show-more__btn">
-              <span class="show-more__text">Показать больше</span>
+              <span class="show-more__text">Показать все</span>
             </button>
 
             <div class="swiper-pagination"></div>
@@ -161,8 +167,10 @@
               <div class="tech swiper-wrapper"></div>
             </div>
 
-            <button class="show-more__btn">
-              <span class="show-more__text">Показать больше</span>
+            <button class="show-more__btn" id="show-more__tech">
+              <span class="show-more__text" id="show-more__text2"
+                >Показать все</span
+              >
             </button>
 
             <div class="swiper-pagination"></div>
@@ -201,12 +209,12 @@
             офертой
           </p>
         </footer>
-        <div class="call-modal">
+        <div class="modal" id="call-modal">
           <div class="modal-wrapper">
             <button class="close-btn" id="close-call" type="button"></button>
             <h1 class="text">Заказать звонок</h1>
 
-            <form class="form" action="" method="">
+            <form class="form" action="#" method="">
               <input
                 type="tel"
                 class="form__phone"
@@ -228,12 +236,12 @@
             </form>
           </div>
         </div>
-        <div class="chat-modal">
+        <div class="modal" id="chat-modal">
           <div class="modal-wrapper">
             <button class="close-btn" id="close-chat"></button>
             <h1 class="text">Обратная связь</h1>
 
-            <form class="form" action="" method="">
+            <form class="form" action="#" method="">
               <input
                 class="form__name"
                 type="name"
@@ -285,6 +293,7 @@
           </div>
         </div>
       </div>
+      <div id="burger-overlay"></div>
     </div>
 
     <script src="js/index.js"></script>

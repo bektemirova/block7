@@ -1,4 +1,3 @@
-
 .slider-section {
   border-top: 1px solid #d9fff5;
 
@@ -7,7 +6,7 @@
     background: linear-gradient(#f8f8f8, #ffffff);
     height: 80px;
     text-transform: uppercase;
-    font-family: "TTLakes-Regular", sans-serif;
+    font-family: 'TTLakes-Regular', sans-serif;
     margin-bottom: 10px;
     color: #7e7e82;
     line-height: 24px;
@@ -15,7 +14,6 @@
     align-items: center;
   }
 }
-
 
 .slider {
   padding: 15px 10px;
@@ -45,18 +43,15 @@
       background-color: white;
       border: 1px solid #eaeaea;
       border-radius: 5px;
-      font-family: "TTLakes-Medium", sans-serif;
+      font-family: 'TTLakes-Medium', sans-serif;
       font-size: 16px;
 
       button {
         align-self: flex-end;
       }
     }
-
   }
-
 }
-
 
 .button__show {
   width: 40px;
@@ -64,12 +59,10 @@
   border: 2px solid #ff3e79;
   border-radius: 50%;
   position: relative;
-
-
 }
 
 .button__show::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 35%;
   top: 40%;
@@ -109,6 +102,14 @@
   min-height: 72px !important;
 }
 
+.opened {
+  height: auto;
+}
+
+.rotate::before {
+  transform: rotate(180deg);
+}
+
 @media (min-width: 768px) {
   .swiper-pagination {
     display: none;
@@ -133,7 +134,7 @@
   }
   .show-more__btn {
     display: flex;
-    font-family: "TTLakes-Medium", sans-serif;
+    font-family: 'TTLakes-Medium', sans-serif;
     align-items: center;
     justify-content: flex-start;
     line-height: 1;
@@ -142,9 +143,8 @@
   }
 
   .show-more__btn::before {
-    content: url("../img/expand.png");
+    content: url('../img/expand.png');
   }
-
 
   .open {
     height: auto;
@@ -153,8 +153,6 @@
   .rotate::before {
     transform: rotate(180deg);
   }
-
-
 }
 
 @media screen and (min-width: 1120px) {
@@ -165,6 +163,4 @@
   .tech {
     grid-template-columns: repeat(4, 1fr);
   }
-
-
 }

@@ -1,14 +1,8 @@
-.call-modal {
-  display: none;
-}
-
-.chat-modal {
-  display: none;
-}
-
-.open-modal {
+.modal {
   display: block;
   z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +10,15 @@
   height: 100vh;
   width: 100vw;
   background: rgba(255, 255, 255, 0.9);
+  transition: opacity 0.3s;
 }
+
+.open {
+  opacity: 1;
+  transition: opacity 0.3s;
+  pointer-events: all;
+}
+
 .modal-wrapper {
   position: fixed;
   right: 0;
@@ -26,6 +28,7 @@
   height: 100%;
   background-color: white;
   box-shadow: rgba(61, 61, 62, 0.5) 0px 8px 40px;
+
   .close-btn {
     position: absolute;
     top: 20px;
@@ -52,7 +55,6 @@
     border-left: 4px solid var(--primary);
     border-radius: 10px;
     height: 40px;
-
     left: 0;
     transform: translateY(-4px);
     transition: 0.5s;
@@ -65,7 +67,7 @@
     gap: 20px;
     justify-content: center;
     font-family: 'TTLakes-Regular', sans-serif;
-
+    padding: 20px;
     input {
       padding: 10px;
       width: 100%;
@@ -106,16 +108,11 @@
   }
 
   @media screen and(max-width: 768px) {
-    padding: 10px;
+    //padding: 10px;
 
     .text {
       margin-top: 90px;
     }
-
-    //.text::before {
-    //  top: -3px;
-    //  left: -10px;
-    //}
 
     .close-btn {
       left: 10px;

@@ -1,11 +1,22 @@
 .aside {
-  font-family: "TTLakes-Medium", sans-serif;
+  font-family: 'TTLakes-Medium', sans-serif;
   font-size: 16px;
   min-height: 676px;
   display: flex;
   height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+
+  .burger-close {
+    background-color: var(--icon-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url('../img/icon.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: none;
+  }
 
   &__top {
     display: flex;
@@ -21,7 +32,7 @@
     height: 500px;
     flex-direction: column;
     justify-content: space-between;
-    font-family: "TTLakes-Medium", sans-serif;
+    font-family: 'TTLakes-Medium', sans-serif;
 
     a:hover,
     a:focus {
@@ -31,7 +42,7 @@
 
     a:hover::before,
     a:focus::before {
-      content: "";
+      content: '';
       border-left: 4px solid var(--primary);
       width: 0;
       height: 32px;
@@ -68,20 +79,20 @@
     }
 
     li:nth-child(1) {
-      background: url("../img/call.svg");
+      background: url('../img/call.svg');
     }
 
     li:nth-child(2) {
-      background: url("../img/chat.svg");
+      background: url('../img/chat.svg');
     }
 
     li:nth-child(3) {
-      background: url("../img/profile.svg");
+      background: url('../img/profile.svg');
     }
   }
 
   &__contact-phone {
-    font-family: "TTLakes-Bold", sans-serif;
+    font-family: 'TTLakes-Bold', sans-serif;
     display: block;
     font-size: 24px;
     margin-top: 10px;
@@ -101,4 +112,29 @@
     transition: all 0.3s ease;
     transform: scale(1.1);
   }
+
+  @media screen and (max-width: 1120px) {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: white;
+    z-index: -100;
+    box-shadow: rgba(61, 61, 62, 0.5) 0px 8px 40px;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    .burger-close {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    width: 100%;
+  }
+}
+
+.show-menu {
+  opacity: 1;
+  transition: opacity 0.3s;
+  z-index: 1100;
 }

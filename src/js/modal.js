@@ -1,31 +1,48 @@
+// заказать звонок
 
-const chatModal = document.querySelector(".chat-modal")
-const callModal = document.querySelector(".call-modal")
-const toggleBtn = document.querySelector(".aside__chat")
-const toggleBtnCall = document.querySelector(".aside__call")
-const closeBtn = document.querySelector("#close-chat")
-const closeBtnCall = document.querySelector("#close-call")
-const formBtn = document.querySelector(".form__btn")
+const modalCall = document.querySelector("#call-modal")
+const openCallModal = document.querySelector(".aside__call")
+const closeCallModal = document.querySelector("#close-call")
 
-
-const toggleChat = (e) => {
+const openModal = (e) => {
   e.preventDefault()
-  chatModal.classList.toggle("open-modal")
+  modalCall.classList.add("open")
 }
 
-
-
-toggleBtn.addEventListener("click", toggleChat)
-closeBtn.addEventListener("click", toggleChat)
-
-formBtn.addEventListener("submit", toggleChat)
-
-
-const toggleCall = (e) => {
-  e.preventDefault()
-  callModal.classList.toggle("open-modal")
+const closeModal = () => {
+  modalCall.classList.remove('open')
 }
 
+openCallModal.addEventListener("click", openModal)
+closeCallModal.addEventListener("click", closeModal)
 
-toggleBtnCall.addEventListener("click", toggleCall)
-closeBtnCall.addEventListener('click', toggleCall)
+
+//заполнить форму
+
+const chatModal = document.querySelector("#chat-modal")
+const openChat = document.querySelector(".aside__chat")
+const closeChat = document.querySelector("#close-chat")
+
+const toggleChatModal = (e) => {
+  e.preventDefault()
+  chatModal.classList.toggle("open")
+}
+
+openChat.addEventListener("click", toggleChatModal)
+closeChat.addEventListener("click", toggleChatModal)
+
+// open burger menu
+
+const burgerBtn = document.querySelector("#burger-menu")
+const sideMenu = document.querySelector("aside")
+const burgerClose = document.querySelector(".burger-close")
+const toggleMenu = () => {
+  const overlay = document.getElementById("burger-overlay")
+  overlay.classList.toggle("modal")
+  overlay.classList.toggle("open")
+  sideMenu.classList.toggle("show-menu")
+
+}
+
+burgerBtn.addEventListener("click", toggleMenu)
+burgerClose.addEventListener("click", toggleMenu)

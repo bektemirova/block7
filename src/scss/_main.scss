@@ -1,7 +1,7 @@
 body {
   font: var(--font-m);
   color: var(--text-color);
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .container {
@@ -11,12 +11,10 @@ body {
   height: 100%;
   margin: 0 auto;
 
-
   .sidebar {
     //height: 100%;
     color: var(--text-color);
     background-color: white;
-
   }
 
   .header {
@@ -61,7 +59,7 @@ body {
       }
 
       &__icons-box > a:after {
-        content: "";
+        content: '';
         border-left: 2px solid var(--line-color);
         width: 0;
         height: 40px;
@@ -71,7 +69,7 @@ body {
       }
 
       .button__line:after {
-        content: "";
+        content: '';
         border-right: 2px solid var(--line-color);
         width: 0;
         height: 40px;
@@ -80,9 +78,7 @@ body {
         left: 110px;
       }
     }
-    .aside {
-      display: none;
-    }
+
     .main-page__text-icons {
       display: none;
     }
@@ -92,6 +88,5 @@ body {
     .header__icons-box_tablet-icons {
       display: none;
     }
-
   }
 }
