@@ -1,6 +1,6 @@
 .modal {
   display: block;
-  z-index: 1000;
+  z-index: 900;
   opacity: 0;
   pointer-events: none;
   position: fixed;
@@ -10,7 +10,7 @@
   height: 100vh;
   width: 100vw;
   background: rgba(255, 255, 255, 0.9);
-  transition: opacity 0.3s;
+  transition: opacity 0.2s;
 }
 
 .open {
@@ -23,7 +23,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  width: 440px;
+  max-width: 440px;
   padding: 24px;
   height: 100%;
   background-color: white;
@@ -68,6 +68,7 @@
     justify-content: center;
     font-family: 'TTLakes-Regular', sans-serif;
     padding: 20px;
+
     input {
       padding: 10px;
       width: 100%;
@@ -119,4 +120,24 @@
       top: 15px;
     }
   }
+}
+
+.show-overlay {
+  display: block;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.9);
+  transition: opacity 0.1s;
+}
+
+.close-overlay {
+  opacity: 1;
+  transition: opacity 0.3s;
 }

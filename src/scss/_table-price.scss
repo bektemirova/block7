@@ -8,12 +8,11 @@
 }
 
 .price {
-
   &__row {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-family: "TTLakes-Regular", sans-serif;
+    font-family: 'TTLakes-Regular', sans-serif;
     min-width: 260px;
     justify-content: space-between;
     height: 240px;
@@ -38,18 +37,16 @@
     justify-self: flex-end;
     color: white;
     text-transform: uppercase;
-    font-family: "TTLakes-Bold", sans-serif;
+    font-family: 'TTLakes-Bold', sans-serif;
     font-size: 12px;
     border-radius: 15px;
   }
 
   &__btn::after {
-    content: url("../img/dropdown.svg");
+    content: url('../img/dropdown.svg');
     margin-left: 15px;
   }
-
 }
-
 
 @media screen and(min-width: 768px) {
   .slider-price {
@@ -58,7 +55,7 @@
   .header-row {
     display: flex;
     width: 100%;
-    font-family: "TTLakes-Regular", sans-serif;
+    font-family: 'TTLakes-Regular', sans-serif;
     color: #979797;
     justify-content: space-between;
     padding: 10px 20px;
@@ -77,7 +74,6 @@
 
       padding-left: 20px;
     }
-
   }
   .price {
     display: flex;
@@ -85,7 +81,7 @@
 
     &__row {
       height: 60px;
-      border-bottom: 1px solid #EAEAEA;;
+      border-bottom: 1px solid #eaeaea;
       width: 100%;
       flex-flow: row wrap;
       justify-content: center;
@@ -113,8 +109,5 @@
     &__cell > span:nth-child(1) {
       display: none;
     }
-
   }
-
 }
-

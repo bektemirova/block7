@@ -62,8 +62,8 @@
 
           <div class="aside__contact">
             <ul class="aside__btn-icons">
-              <li class="aside__chat"><a href="#"></a></li>
               <li class="aside__call"><a href="#"></a></li>
+              <li class="aside__chat"><a href="#"></a></li>
               <li class="aside__profile"><a href="#"></a></li>
             </ul>
 
@@ -126,17 +126,21 @@
 
           <article class="info-box">
             <div class="info-box__about-item">
-              <p>
+              <p class="info-box__content">
                 Мы являемся авторизованным сервисным центром по ремонту техники
                 Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
                 официальной гарантией производителя.
-              </p>
-              <br />
-              <p class="info-box__text-content">
-                Мы успешно работаем с 1992 года и заслужили репутацию надежного
-                партнера, что подтверждает большое количество постоянных
-                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
-                и, в свою очередь, советуют нас родным и близким.
+
+                <br />
+                <span class="info-box__tablet-content">
+                  Мы успешно работаем с 1992 года и заслужили репутацию
+                  надежного партнера что подтверждает большое количество
+                  постоянных клиентов.
+                  <span id="desktop-content"
+                    >Мы гордимся тем, что к нам обращаются по рекомендациям и, в
+                    свою очередь, советуют нас родным и близким.
+                  </span>
+                </span>
               </p>
 
               <button class="info-box__btn">
@@ -151,29 +155,27 @@
 
           <section class="slider-section">
             <p class="slider-section__text">Ремонт техники различных брендов</p>
-            <div class="slider swiper">
+            <div class="slider swiper" id="slider-brands">
               <div class="brands swiper-wrapper"></div>
+              <div class="swiper-pagination"></div>
             </div>
 
-            <button class="show-more__btn">
-              <span class="show-more__text">Показать все</span>
+            <button class="show-more__btn" id="brands-btn">
+              <span class="show-more__text" id="brands-text">Показать все</span>
             </button>
-
-            <div class="swiper-pagination"></div>
           </section>
           <section class="slider-section">
             <p class="slider-section__text">Ремонт различных видов техники</p>
-            <div class="slider swiper">
+            <div class="slider swiper" id="slider-technics">
               <div class="tech swiper-wrapper"></div>
+              <div class="swiper-pagination"></div>
             </div>
 
-            <button class="show-more__btn" id="show-more__tech">
-              <span class="show-more__text" id="show-more__text2"
+            <button class="show-more__btn" id="technics-btn">
+              <span class="show-more__text" id="technics-text"
                 >Показать все</span
               >
             </button>
-
-            <div class="swiper-pagination"></div>
           </section>
 
           <section class="slider-section">
@@ -186,8 +188,8 @@
                 <p class="header-row__col">Срок</p>
               </div>
               <div class="price swiper-wrapper"></div>
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
           </section>
           <div class="offer-box">
             <p class="copy-right">
@@ -293,7 +295,7 @@
           </div>
         </div>
       </div>
-      <div id="burger-overlay"></div>
+      <div id="burger-overlay" class="show-overlay"></div>
     </div>
 
     <script src="js/index.js"></script>
