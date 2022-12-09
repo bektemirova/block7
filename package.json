@@ -10,8 +10,6 @@
     "webpack"
   ],
   "license": "ISC",
-  "author": "Kata Academy",
-  "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "predeploy": "npm run build",

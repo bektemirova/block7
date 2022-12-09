@@ -11,8 +11,11 @@ module.exports = {
 
   // Выходной файл
   output: {
-    filename: './js/bundle.js'
+    filename: './js/bundle.js',
+
+
   },
+
 
   // Source maps для удобства отладки
   devtool: "source-map",
@@ -85,7 +88,7 @@ module.exports = {
       filename: 'style.css',
     }),
 
-    // Копируем картинки
+
     new CopyWebpackPlugin([
       {
         from: './src/img',

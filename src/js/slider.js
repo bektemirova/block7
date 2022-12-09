@@ -1,39 +1,55 @@
 import Swiper, {Pagination} from 'swiper';
+const swiper = document.querySelector(".swiper")
 
-const breakPoint = window.matchMedia("(max-width:768px)");
 let mySwiper;
 
 
-breakPoint.addEventListener("change", function () {
-  if (breakPoint === true) {
-    mySwiper = new Swiper(".swiper", {
-      modules: [Pagination],
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      mousewhell: true,
-      keyboard: true,
-      allowTouchMove: true,
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 30,
+const enableSwiper = function () {
+
+  if (window.innerWidth <= 768) {
+    if (!swiper.classList.contains("swiper-initialized")) {
+      mySwiper = new Swiper(".swiper", {
+        modules: [Pagination],
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
-        480: {
-          slidesPerView: 2,
-          spaceBetween: 30,
+        mousewhell: true,
+        keyboard: true,
+        allowTouchMove: true,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
         },
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-      },
-    });
+
+
+
+      })
+
+    }
+  } else if (swiper.classList.contains("swiper-initialized") && !mySwiper[0].destroyed) {
+
+    for (let slider of mySwiper) {
+      slider.destroy();
+    }
+
   }
-  else if (breakPoint === false) {
-    mySwiper.destroy()
-  }
+}
+enableSwiper()
+
+
+window.addEventListener("resize", () => {
+  enableSwiper()
 })
 
