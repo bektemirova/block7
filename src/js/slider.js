@@ -4,8 +4,8 @@ const breakPoint = window.matchMedia("(max-width:768px)");
 let mySwiper;
 
 
-window.addEventListener("resize", function () {
-  if (breakPoint) {
+breakPoint.addEventListener("change", function () {
+  if (breakPoint === true) {
     mySwiper = new Swiper(".swiper", {
       modules: [Pagination],
       spaceBetween: 30,
@@ -31,7 +31,8 @@ window.addEventListener("resize", function () {
         },
       },
     });
-  } else {
+  }
+  else if (breakPoint === false) {
     mySwiper.destroy()
   }
 })
