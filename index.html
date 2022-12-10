@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,34 +11,36 @@
       <div class="sidebar">
         <header class="header">
           <div class="header__icons-box">
-            <button type="button" class="button" title="menu" id="burger-menu"></button>
+            <button type="button" class="button" title="menu"></button>
             <a href="#">
               <img src="./img/logo.svg" class="logo-img" alt="logo cps">
             </a>
           </div>
+          <div class="header__tablet">
+            <div class="header__icons-box_tablet-icons">
+              <button type="button" class="button" title="call"></button>
+              <button type="button" class="button" title="chat"></button>
+              <button type="button" class="button button__line" title="profile"></button>
+            </div>
 
-          <div class="header__icons-box_tablet-icons">
-            <button type="button" class="button" title="call"></button>
-            <button type="button" class="button" title="chat"></button>
-            <button type="button" class="button button__line" title="profile"></button>
-          </div>
-
-          <div class="header__icons-box">
-            <button type="button" class="button" title="repair"></button>
-            <button type="button" class="button" title="checkstatus"></button>
+            <div class="header__icons-box">
+              <button type="button" class="button" title="repair"></button>
+              <button type="button" class="button" title="checkstatus"></button>
+            </div>
           </div>
         </header>
-
+        <div class="modal" id="overlay"></div>
         <aside class="aside">
           <div class="aside__top">
-            <button class="burger-close"></button>
+            <button class="button burger-close" title="close-menu"></button>
+
             <div class="aside__logo">
               <a href="#">
                 <img src="img/logo.svg" class="logo-img" alt="logo cps">
               </a>
             </div>
 
-            <button type="button" class="button" title="search-menu"></button>
+            <button class="button" title="search-menu"></button>
           </div>
           <ul class="aside__ul">
             <li><a href="#">Ремонт техники</a></li>
@@ -52,11 +54,11 @@
           </ul>
 
           <div class="aside__contact">
-            <ul class="aside__btn-icons">
-              <li class="aside__call"><a href="#"></a></li>
-              <li class="aside__chat"><a href="#"></a></li>
-              <li class="aside__profile"><a href="#"></a></li>
-            </ul>
+            <div class="aside__btn-icons">
+              <button type="button" class="button" title="call"></button>
+              <button type="button" class="button" title="chat"></button>
+              <button type="button" class="button" title="profile"></button>
+            </div>
 
             <div class="aside__contact-text">
               <a href="mailto:mail@cps.com" class="aside__contact-mail">mail@cps.com</a>
@@ -189,52 +191,50 @@
             офертой
           </p>
         </footer>
-        <div class="modal" id="call-modal">
-          <div class="modal-wrapper">
-            <button class="close-btn" id="close-call" type="button"></button>
-            <h1 class="text">Заказать звонок</h1>
+      </div>
+      <div class="modal" id="call-modal">
+        <div class="modal-wrapper">
+          <button class="button form-btn" title="close-menu"></button>
 
-            <form class="form" action="#" method="">
-              <input type="tel" class="form__phone" name="phone number" min="11" max="20" placeholder="Телефон" pattern="[0-9]{4}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+          <h1 class="text">Заказать звонок</h1>
 
-              <p class="form__agree">
-                Нажимая “отправить”, вы даете согласие на
-                <span>обработку персональных данных </span>и соглашаетесь с
-                нашей
-                <span>политикой конфиденциальности</span>
-              </p>
-              <button class="form__btn" type="submit">ОТПРАВИТЬ</button>
-            </form>
-          </div>
-        </div>
-        <div class="modal" id="chat-modal">
-          <div class="modal-wrapper">
-            <button class="close-btn" id="close-chat"></button>
-            <h1 class="text">Обратная связь</h1>
+          <form class="form" action="#" method="">
+            <input type="tel" class="form__phone" min="11" max="20" placeholder="Телефон" pattern="[0-9]{4}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
 
-            <form class="form" action="#" method="">
-              <input class="form__name" type="name" name="name" placeholder="Имя" required minlength="2">
-
-              <input type="tel" class="form__phone" name="phone number" min="11" max="20" placeholder="Телефон" pattern="[0-9]{4}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-
-              <input type="email" class="form__email" name="email" min="6" max="20" placeholder="Электронная почта" required>
-
-              <textarea class="form__area" name="form-area" id="form-area" cols="30" rows="10" placeholder="Сообщение"></textarea>
-
-              <p class="form__agree">
-                Нажимая “отправить”, вы даете согласие на
-                <span>обработку персональных данных </span>и соглашаетесь с
-                нашей
-                <span>политикой конфиденциальности</span>
-              </p>
-              <button class="form__btn" type="submit">ОТПРАВИТЬ</button>
-            </form>
-          </div>
+            <p class="form__agree">
+              Нажимая “отправить”, вы даете согласие на
+              <span>обработку персональных данных </span>и соглашаетесь с нашей
+              <span>политикой конфиденциальности</span>
+            </p>
+            <button class="form__btn" type="submit">ОТПРАВИТЬ</button>
+          </form>
         </div>
       </div>
-      <div id="burger-overlay" class="show-overlay"></div>
+      <div class="modal" id="chat-modal">
+        <div class="modal-wrapper">
+          <button class="button form-btn" title="close-menu"></button>
+          <h1 class="text">Обратная связь</h1>
+
+          <form class="form" action="#" method="">
+            <input class="form__name" type="name" placeholder="Имя" required minlength="2">
+
+            <input type="tel" class="form__phone" min="11" max="20" placeholder="Телефон" pattern="[0-9]{4}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+
+            <input type="email" class="form__email" min="6" max="20" placeholder="Электронная почта" required>
+
+            <textarea class="form__area" id="form-area" cols="30" rows="10" placeholder="Сообщение"></textarea>
+
+            <p class="form__agree">
+              Нажимая “отправить”, вы даете согласие на
+              <span>обработку персональных данных </span>и соглашаетесь с нашей
+              <span>политикой конфиденциальности</span>
+            </p>
+            <button class="form__btn" type="submit">ОТПРАВИТЬ</button>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <script src="js/index.js"></script>
+    <script src="./js/index.js"></script>
   <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
