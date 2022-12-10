@@ -8,7 +8,7 @@ body {
   display: grid;
   grid-template-columns: 320px auto;
   max-width: 1440px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   margin: 0 auto;
 
@@ -33,6 +33,10 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 88px auto;
     align-items: center;
+
+    .aside {
+      height: 100%;
+    }
 
     .main {
       border-top: 1px solid #d9fff5;
