@@ -38,18 +38,21 @@ const enableSwiper = function () {
       })
 
     }
-  } else if (swiper.classList.contains("swiper-initialized") && !mySwiper[0].destroyed) {
+  } else {
+    if (swiper.classList.contains("swiper-initialized") && !mySwiper[0].destroyed) {
 
-    for (let slider of mySwiper) {
-      slider.destroy();
+      for (let slider of mySwiper) {
+        slider.destroy();
+      }
     }
+
 
   }
 }
 enableSwiper()
 
 
-window.addEventListener("resize", () => {
+window.addEventListener("resize", function () {
   enableSwiper()
 })
 

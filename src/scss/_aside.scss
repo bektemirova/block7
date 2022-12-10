@@ -7,17 +7,6 @@
   flex-direction: column;
   justify-content: space-between;
 
-  .burger-close {
-    background-color: var(--icon-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-image: url('../img/icon.svg');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    display: none;
-  }
-
   &__top {
     display: flex;
     justify-content: space-between;
@@ -25,7 +14,9 @@
     padding: 20px;
     height: 84px;
   }
-
+  .burger-close {
+    display: none;
+  }
   &__ul {
     padding: 32px;
     display: flex;
@@ -115,6 +106,7 @@
 
   @media screen and (max-width: 1120px) {
     position: fixed;
+    max-width: 340px;
     top: 0%;
     left: 0%;
     background-color: white;
@@ -132,10 +124,4 @@
   @media screen and (max-width: 360px) {
     width: 100%;
   }
-}
-
-.show-menu {
-  opacity: 1;
-  transition: opacity 0.3s;
-  z-index: 1100;
 }

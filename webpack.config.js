@@ -19,11 +19,11 @@ module.exports = {
 
   // Source maps для удобства отладки
   devtool: "source-map",
-  devServer: {
-    port: 3000,
-    open: true,
-    hot: true,
-  },
+  //devServer: {
+  //  port: 3000,
+  //  open: true,
+  //  hot: true,
+  //},
   module: {
     rules: [
       // Транспилируем js с babel
