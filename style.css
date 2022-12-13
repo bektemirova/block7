@@ -458,7 +458,8 @@ input {
     max-width: 531px;
     max-height: 307px; }
     .info-box__about-image img {
-      width: 100%; }
+      width: 100%;
+      min-width: 0; }
   .info-box__btn {
     display: flex;
     font-family: 'TTLakes-Medium', sans-serif;
