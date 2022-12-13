@@ -24,20 +24,21 @@
   .brands {
     &__box {
       display: flex;
-      min-width: 240px;
+      //min-width: 240px;
       justify-content: space-between;
       align-items: center;
       padding: 0 15px;
       background-color: white;
       border: 1px solid #eaeaea;
       border-radius: 5px;
+      gap: 5px;
     }
   }
 
   .tech {
     &__box {
       display: flex;
-      min-width: 240px;
+      //min-width: 240px;
       height: 160px;
       flex-direction: column;
       justify-content: space-between;
@@ -127,6 +128,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    //min-width: 0;
   }
 
   .tech {
@@ -160,6 +162,7 @@
 @media screen and (min-width: 1120px) {
   .brands {
     grid-template-columns: repeat(4, 1fr);
+    //min-width: 0;
   }
 
   .tech {

@@ -1,24 +1,20 @@
 const sideMenu = document.querySelector("aside")
-const side = document.querySelector("#aside-form")
 const buttons = document.querySelectorAll(".button")
-const chatModal = document.querySelector("#chat-modal")
-const modalCall = document.querySelector("#call-modal")
+const chatModal = document.querySelector(".chat-modal")
+const modalCall = document.querySelector(".call-modal")
 const overlay = document.querySelector(".modal")
 
 document.addEventListener("click", function (e) {
 
-  if (e.target.id === "call-modal") {
+
+  if (e.target.classList.contains("modal")) {
     modalCall.classList.remove('open')
     sideMenu.classList.remove("open")
     overlay.classList.remove("open")
+    chatModal.classList.remove('open')
   }
 
-  if (e.target.id === "chat-modal") {
-    chatModal.classList.remove('open')
-    sideMenu.classList.remove("open")
-    overlay.classList.remove("open")
-  }
-  if (e.target.id === "overlay") {
+  if (e.target.classList.contains("overlay")) {
     sideMenu.classList.remove("open")
     overlay.classList.remove("open")
   }
