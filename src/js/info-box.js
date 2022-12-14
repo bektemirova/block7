@@ -3,7 +3,7 @@ const tabletContent = document.querySelector(".info-box__tablet-content")
 
 export const showContent = () => {
   let textBtn = infoBoxButton.querySelector(".info-box__btn-text")
-  let openContent = document.querySelector("#desktop-content")
+  let openContent = document.querySelector(".desktop-content")
   if (window.innerWidth < 768) {
     tabletContent.classList.toggle("content-show")
   }

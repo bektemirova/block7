@@ -25,9 +25,9 @@ for (let el of names) {
 }
 //show more
 
-const showBtn = document.querySelector("#technics-btn");
-const sliderContainer = document.querySelector("#slider-technics");
-const textBtn = document.querySelector("#technics-text");
+const showBtn = document.querySelector(".technics-btn");
+const sliderContainer = document.querySelector(".slider-technics");
+const textBtn = document.querySelector(".technics-text");
 showBtn.addEventListener("click", function () {
   let text;
   sliderContainer.classList.toggle("open");

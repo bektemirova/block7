@@ -43,9 +43,9 @@ for (let keys in images) {
 
 //<--show more brands-->
 
-const showBtn = document.querySelector("#brands-btn");
-const sliderContainer = document.querySelector("#slider-brands");
-const textBtn = document.querySelector("#brands-text");
+const showBtn = document.querySelector(".brands-btn");
+const sliderContainer = document.querySelector(".slider-brands");
+const textBtn = document.querySelector(".brands-text");
 showBtn.addEventListener("click", function () {
   let text;
   sliderContainer.classList.toggle("open");

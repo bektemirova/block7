@@ -33,7 +33,7 @@
             </div>
           </div>
         </header>
-        <div class="modal" id="overlay"></div>
+        <div class="modal"></div>
         <aside class="aside">
           <div class="aside__top">
             <button class="button burger-close" title="close-menu"></button>
@@ -133,7 +133,7 @@
                   Мы успешно работаем с 1992 года и заслужили репутацию
                   надежного партнера что подтверждает большое количество
                   постоянных клиентов.
-                  <span id="desktop-content"
+                  <span class="desktop-content"
                     >Мы гордимся тем, что к нам обращаются по рекомендациям и, в
                     свою очередь, советуют нас родным и близким.
                   </span>
@@ -152,26 +152,24 @@
 
           <section class="slider-section">
             <p class="slider-section__text">Ремонт техники различных брендов</p>
-            <div class="slider swiper" id="slider-brands">
+            <div class="slider swiper slider-brands">
               <div class="brands swiper-wrapper"></div>
               <div class="swiper-pagination"></div>
             </div>
 
-            <button class="show-more__btn" id="brands-btn">
-              <span class="show-more__text" id="brands-text">Показать все</span>
+            <button class="show-more__btn brands-btn">
+              <span class="show-more__text brands-text">Показать все</span>
             </button>
           </section>
           <section class="slider-section">
             <p class="slider-section__text">Ремонт различных видов техники</p>
-            <div class="slider swiper" id="slider-technics">
+            <div class="slider swiper slider-technics">
               <div class="tech swiper-wrapper"></div>
               <div class="swiper-pagination"></div>
             </div>
 
-            <button class="show-more__btn" id="technics-btn">
-              <span class="show-more__text" id="technics-text"
-                >Показать все</span
-              >
+            <button class="show-more__btn technics-btn">
+              <span class="show-more__text technics-text">Показать все</span>
             </button>
           </section>
 
@@ -262,8 +260,8 @@
             <input
               type="email"
               class="form__email"
-              min="6"
-              max="20"
+              minlength="4"
+              maxlength="30"
               placeholder="Электронная почта"
               required
             />
